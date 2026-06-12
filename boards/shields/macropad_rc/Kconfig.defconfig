@@ -1,0 +1,6 @@
+if SHIELD_MACROPAD_RC
+
+config ZMK_KEYBOARD_NAME
+    default "macropad-rc"
+
+endif # SHIELD_MACROPAD_RC

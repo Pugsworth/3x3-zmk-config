@@ -1,0 +1,2 @@
+config SHIELD_MACROPAD_RC
+    def_bool $(shields_list_contains,macropad_rc)
