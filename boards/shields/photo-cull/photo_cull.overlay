@@ -41,5 +41,19 @@
         display-name = "Default Layout";
         kscan = <&kscan0>; // Label of the kscan node, optional if all layouts use the same
         transform = <&default_transform>; // Label of the matrix transform for this layout
+
+        keys
+            = <&key_physical_attrs 0 0 100 100 0 0 0> // Row 1, Col 1
+            , <&key_physical_attrs 0 100 100 100 0 0 0> // Row 1, Col 2
+            , <&key_physical_attrs 0 200 100 100 0 0 0> // Row 1, Col 3
+            
+            , <&key_physical_attrs 100 0 100 100 0 0 0> // Row 2, Col 1
+            , <&key_physical_attrs 100 100 100 100 0 0 0> // Row 2, Col 2
+            , <&key_physical_attrs 100 200 100 100 0 0 0> // Row 2, Col 3
+            
+            , <&key_physical_attrs 200 0 100 100 0 0 0> // Row 3, Col 1
+            , <&key_physical_attrs 200 100 100 100 0 0 0> // Row 3, Col 2
+            , <&key_physical_attrs 200 200 100 100 0 0 0> // Row 3, Col 3
+            ;
     };
 };
