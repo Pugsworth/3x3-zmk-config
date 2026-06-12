@@ -19,5 +19,22 @@
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
+
+        // fn_layer {
+        //     display-name = "Fn";
+        //     bindings =
+        // };
+
+        layer_2 {
+            status = "reserved";
+        };
+
+        layer_3 {
+            status = "reserved";
+        };
+
+        layer_4 {
+            status = "reserved";
+        };
     };
 };
