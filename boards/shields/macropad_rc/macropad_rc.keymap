@@ -17,7 +17,7 @@
                 &kp SPACE       &kp N9      &kp N0      &kp A       &kp B
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
         };
 
         // fn_layer {
