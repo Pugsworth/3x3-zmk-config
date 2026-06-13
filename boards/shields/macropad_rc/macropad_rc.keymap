@@ -39,9 +39,11 @@
 
         layer_underglow {
             bindings = <
-                &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD
-                &rgb_ug RGB_HUI  &rgb_ug RGB_HUD  &none            &none
-                &none
+                            &rgb_ug RGB_TOG     &rgb_ug RGB_EFF     &rgb_ug RGB_BRI     &rgb_ug RGB_BRD
+                            &rgb_ug RGB_HUI     &rgb_ug RGB_HUD     &none               &none
+                &none       &none               &none               &none               &trans
+
+                sensor-bindings = <&inc_dec_un_kp RGB_BRD RGB_BRI &none>;
             >;
         };
     };
