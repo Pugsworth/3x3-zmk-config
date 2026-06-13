@@ -14,6 +14,12 @@
         zmk,underglow = &led_strip;
     };
 
+    sensors: sensors {
+        compatible = "zmk,keymap-sensors";
+        sensors = <&encoder_left &encoder_right>;
+        triggers-per-rotation = <20>;
+    };
+
     kscan: kscan {
         // If the hardware does not use a switch matrix, change this to the
         // appropriate driver and update the properties below to match.
@@ -72,12 +78,6 @@
         steps = <80>;
         status = "disabled"; // inactive - not wired in
     };
-
-    sensors: sensors {
-        compatible = "zmk,keymap-sensors";
-        sensors = <&encoder_left &encoder_right>;
-        triggers-per-rotation = <20>;
-    };
 };
 
 &pinctrl {
@@ -97,6 +97,7 @@
 
 &spi3 {
     compatible = "nordic,nrf-spim";
+    label = "led_strip";
     status = "okay";
     
     pinctrl-0 = <&spi3_default>;
@@ -115,11 +116,5 @@
         color-mapping = <LED_COLOR_ID_GREEN
                          LED_COLOR_ID_RED
                          LED_COLOR_ID_BLUE>; 
-    };
-};
-
-/ {
-    aliases {
-        led-strip = &led_strip;
     };
 };
