@@ -117,3 +117,9 @@
                          LED_COLOR_ID_BLUE>; 
     };
 };
+
+/ {
+    aliases {
+        led-strip = &led_strip;
+    };
+};
