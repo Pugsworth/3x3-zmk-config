@@ -39,7 +39,7 @@
             , <&pro_micro 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // Col 3 (D7, P1.04)
             , <&pro_micro 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // Col 4 (D6, P1.06)
 
-            , <&pro_micro 18 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Extra Key Column (A0 / D18, P1.15)
+            , <&gpio1 15 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // Extra Key Column (A0 / D18, P1.15)
             ;
     };
 
