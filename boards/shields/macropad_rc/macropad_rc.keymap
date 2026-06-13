@@ -6,6 +6,14 @@
 #include <dt-bindings/zmk/rgb.h>
 
 / {
+    behaviors {
+        rgb_encoder: rgb_encoder {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&rgb_ug RGB_BRD>, <&rgb_ug RGB_BRI>;
+        };
+    };
+
     // Define a default keymap here.
     // See https://zmk.dev/docs/development/hardware-integration/new-shield#default-keymap.
     keymap {
@@ -18,7 +26,7 @@
                 &kp SPACE       &kp N9      &kp N0      &kp A       &kp B
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &none>;
         };
 
         // fn_layer {
@@ -45,7 +53,7 @@
                 &none       &none               &none               &none               &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp RGB_BRD RGB_BRI &none>;
+            sensor-bindings = <&rgb_encoder &none>;
         };
     };
 };
