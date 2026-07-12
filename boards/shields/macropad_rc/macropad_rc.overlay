@@ -97,9 +97,10 @@
 
 &usbd {
 	status = "okay";
-	cdc_acm_uart {
-		status = "okay";
-	};
+};
+
+&cdc_acm_uart {
+	status = "okay";
 };
 
 &spi1 {
