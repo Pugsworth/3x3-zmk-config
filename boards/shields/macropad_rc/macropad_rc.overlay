@@ -99,6 +99,10 @@
 	status = "okay";
 };
 
+&cdc_acm_uart {
+	status = "okay";
+};
+
 &spi1 {
     compatible = "nordic,nrf-spim";
     label = "led_strip";
