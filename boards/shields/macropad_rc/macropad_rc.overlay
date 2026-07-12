@@ -12,6 +12,7 @@
         zmk,kscan = &kscan;
         zmk,physical-layout = &default_layout;
         zmk,underglow = &led_strip;
+		zephyr,console = &cdc_acm_uart;
     };
 
     sensors: sensors {
@@ -97,6 +98,9 @@
 
 &usbd {
 	status = "okay";
+	cdc_acm_uart {
+		status = "okay";
+	};
 };
 
 &spi1 {
