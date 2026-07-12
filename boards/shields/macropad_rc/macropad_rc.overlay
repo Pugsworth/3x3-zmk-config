@@ -12,6 +12,7 @@
         zmk,kscan = &kscan;
         zmk,physical-layout = &default_layout;
         zmk,underglow = &led_strip;
+        zephyr,console = &uart0;
     };
 
     sensors: sensors {
