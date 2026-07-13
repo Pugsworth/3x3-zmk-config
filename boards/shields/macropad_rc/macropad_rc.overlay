@@ -125,7 +125,7 @@
 
 &pro_micro_i2c {
     status = "okay";
-	clock-frequency = <400000>;
+	clock-frequency = <100000>;
 
     oled: ssd1306@3c {
         compatible = "solomon,ssd1306fb";
