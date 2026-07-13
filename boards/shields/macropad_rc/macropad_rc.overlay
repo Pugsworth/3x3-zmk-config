@@ -122,6 +122,15 @@
     };
 };
 
+/* Force the VCC pin on instantly during pre-kernel boot */
+&gpio0 {
+    vcc_hog {
+        gpio-hog;
+        gpios = <13 GPIO_ACTIVE_HIGH>;
+        output-high;
+    };
+};
+
 
 &pro_micro_i2c {
     status = "okay";
